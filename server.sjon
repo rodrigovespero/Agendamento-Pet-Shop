@@ -1,0 +1,44 @@
+{
+  "schedules": [
+    {
+      "id": "nhwp49xt8",
+      "tutorName": "Helena Souza",
+      "phoneNumber": "(21) 999999999",
+      "petName": "Cheddar",
+      "service": "Banho e tosa",
+      "when": "2025-08-12T12:00:00.000Z"
+    },
+    {
+      "id": "6hci9kqh5",
+      "tutorName": "Leyvison Menezes",
+      "phoneNumber": "(21)00000000",
+      "petName": "Rex",
+      "service": "Vacinação",
+      "when": "2025-08-12T13:45:00.000Z"
+    },
+    {
+      "id": "ujk459yd7",
+      "tutorName": "Rodrigo Fernandes",
+      "phoneNumber": "(21) 999999999",
+      "petName": "Caju",
+      "service": "Corte de unhas",
+      "when": "2025-08-12T16:30:00.000Z"
+    },
+    {
+      "id": "n9sd7th25",
+      "tutorName": "Fernanda Cruz",
+      "phoneNumber": "(21) 77777777",
+      "petName": "Nina",
+      "service": "Vacinação",
+      "when": "2025-08-12T20:30:00.000Z"
+    },
+    {
+      "id": "hffwzduwe",
+      "tutorName": "Amanda Ribeiro",
+      "phoneNumber": "(21) 222222222",
+      "petName": "Luna",
+      "service": "Vacinação",
+      "when": "2025-08-12T23:00:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Pet - Agendamento</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/overlay.css">
+    <link rel="stylesheet" href="src/styles/periods.css">
+    <link rel="stylesheet" href="src/styles/utilities.css">
+</head>
+<body class="">
+
+    <div id="blur-div" class="hidden blur">
+        <!-- DIV QUE COBRE A TELA COM BLUR -->
+    </div>
+
+    <header>
+        <div id="app-name">
+            <img src="src/assets/icons/dog-icon.svg" alt="icone cão do site">
+            <strong>MUNDO PET</strong>
+        </div>
+    </header>
+
+    <main>
+        <div id="agenda" class="container flex gap-75">
+            <div>
+                <h1>Sua Agenda</h1>
+                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            </div>
+            <div class="input-wrapper">
+                <input type="date" name="daily-schedules" id="daily-schedules">
+            </div>
+        </div>
+
+        <section id="periods" class="container flex column gap-75 margin-2">
+            <!-- Manhã -->
+            <section id="morning-period" class="period">
+                <div id="period-title" class="flex gap-75 border-bottom">
+                    <img src="./src/assets/icons/sunrise-icon.svg" alt="ícone nascer do sol">
+                    <strong>Manhã</strong>
+                    <span>09h-12h</span>
+                </div>
+                <div id="scheduled-pets">
+                    <!-- <div id="scheduled-pet" class="flex column border-bottom">
+                        <strong id="scheduled-infos">
+                            09:00 Thor
+                            <span id="pet-owner">/ Fernanda Costa</span>
+                        </strong>
+                        <span id="service-description">Vacinação</span>
+                        <p>Remover agendamento</p>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- Tarde -->
+            <section id="afternoon-period" class="period">
+                <div id="period-title" class="flex gap-75 border-bottom">
+                    <img src="./src/assets/icons/cloud-sun-icon.svg" alt="ícone tarde com sol">
+                    <strong>Tarde</strong>
+                    <span>13h-18h</span>
+                </div>
+                <div id="scheduled-pets">
+                    <!-- <div id="scheduled-pet" class="flex column border-bottom">
+                        <strong id="scheduled-infos">
+                            09:00 Thor
+                            <span id="pet-owner">/ Fernanda Costa</span>
+                        </strong>
+                        <span id="service-description">Vacinação</span>
+                        <p>Remover agendamento</p>
+                    </div> -->
+                </div>
+            </section>
+
+            <!-- Noite -->
+            <section id="night-period" class="period">
+                <div id="period-title" class="flex gap-75 border-bottom">
+                    <img src="./src/assets/icons/moon-stars-icon.svg" alt="ícone lua com estrelas">
+                    <strong>Noite</strong>
+                    <span>19h-21h</span>
+                </div>
+                <div id="scheduled-pets">
+                    <!-- <div id="scheduled-pet" class="flex column border-bottom">
+                        <strong id="scheduled-infos">
+                            09:00 Thor
+                            <span id="pet-owner">/ Fernanda Costa</span>
+                        </strong>
+                        <span id="service-description">Vacinação</span>
+                        <p>Remover agendamento</p>
+                    </div> -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Botão que abre o overlay -->
+        <div id="to-schedule" class="flex">
+            <div>
+                <strong>NOVO AGENDAMENTO</strong>
+            </div>
+        </div>
+    </main>
+
+    <!-- Formulário overlay de novo agendamento -->
+    <div id="overlay" class="hidden container flex column">
+
+    <div id="close-form">
+    </div>
+
+    <form id="schedule-form" action="#" method="post" class="flex column">
+        <div class="form-header">
+            <h2>Agende um Atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <!-- Formulário -->
+        <div class="form-group icon-user">
+            <strong>Nome do tutor</strong>
+            <input type="text" name="ownerName" id="owner-name" placeholder="Helena Souza">
+        </div>
+        <div class="form-group icon-pet">
+            <strong>Nome do pet</strong>
+            <input type="text" name="petName" id="pet-name" placeholder="Cheddar">
+        </div>
+        <div class="form-group icon-phone">
+            <strong>Telefone</strong>
+            <input type="tel" name="contact" id="owner-contact" placeholder="(00) 0 0000-0000">
+        </div>
+        <div class="form-group">
+            <strong>Descrição do serviço</strong>
+            <input type="text" name="description" id="service" placeholder="Banho e tosa">
+        </div>
+        <div class="form-group icon-date">
+            <strong>Data</strong>
+            <input type="date" name="day" id="schedule-day">
+        </div>
+        <div class="form-group icon-time">
+            <strong>Hora</strong>
+            <input type="time" name="hour" id="schedule-hour">
+        </div>
+
+        <!-- Botão submit -->
+        <div id="submit-btn" class="form-action flex">
+            <input type="submit" value="AGENDAR">
+        </div>
+    </form>
+
+    </div>
+</body>
+</html>
