@@ -1,0 +1,146 @@
+body{
+    background-color: var(--background-primary);
+    margin-inline: auto;
+
+    max-width: var(--atual-width);
+}
+
+#app-name{
+    background-color: var(--content-logo);
+    width: 9.75rem;
+    height: 3.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0 0.75rem 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    & strong{
+        font: var(--label-lg);
+        color: var(--content-brand);
+    }
+}
+main{
+    margin-bottom: 6rem;
+}
+#agenda{
+    flex-direction: column;
+
+    & h1{
+        font: var(--title);
+        color: var(--content-primary);
+    }
+    & p{
+        font: var(--pg-md);
+        color: var(--content-secondary);
+    }
+
+    .input-wrapper{
+        position: relative;
+        display: inline-block;
+    }
+    /* Cria o ícone de calendário */
+    .input-wrapper::before{
+        content: "";
+        position: absolute;
+
+        width: 1.25rem;
+        height: 1.25rem;
+
+        top: 0.875rem;
+        left: 0.75rem;
+
+        background-image: url("../assets/icons/calendar-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+    /* Cria o ícone de seleção de datas */
+    .input-wrapper::after{
+        content: "";
+        position: absolute;
+
+        width: 1.25rem;
+        height: 1.25rem;
+
+        top: 0.9rem;
+        left: 9.5rem;
+
+        background-image: url("../assets/icons/check-icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+    /* Ajusta a caixa principal do input */
+    & input[type="date"]{
+        all: unset;
+        box-sizing: border-box;
+
+        width: 11.25rem;
+        height: 3rem;
+
+        padding: 0.75rem 0.75rem 0.75rem 2.4rem;
+
+        border: 2px solid var(--content-tertiary);
+        border-radius: 0.75rem;
+
+        font: var(--label-calendar);
+        color: var(--content-secondary);
+    }
+
+    /* Aqui retira-se o ícone padrão de abertura do calendário com o opacity. Se utilizar o display none, remove-se o ícone e a funcionalidade de abrir */
+    & input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0%;
+        -webkit-appearance: none;
+        cursor: pointer;
+    }
+}
+
+#to-schedule{
+    background-color: var(--background-tertiary-transparent);
+    width: var(--atual-width);
+    height: 5.25rem;
+
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 1000;
+
+    top: 85%;
+
+    & div{
+        background-color: var(--background-brand);
+        padding: .75rem 1.5rem;
+        border-radius: .75rem;
+
+        box-shadow: 0 0 .5rem .1rem var(--background-brand);
+    }
+
+    & div:hover{
+        cursor: pointer;
+    }
+
+    & div strong{
+        font: var(--label-lg);
+        color: var(--content-black);
+    }
+    
+}
+
+@media (min-width: 44.4375rem) {
+  #agenda{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #to-schedule{
+    background-color: transparent;
+    left: 60%;
+    & div{
+        box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    /* COLORS */
+    /* Content colors */
+    --content-primary: #FFFFFF;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+    --content-logo: #2E2C30;
+    --content-black: #050505;
+
+    /* Background colors */
+    --background-primary: #14151D;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-tertiary-transparent: #23242Ccc;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+
+    /* Border colors */
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+
+    /* TIPOGRAPHY */
+    /* Inter tight */
+    --ff-tight: "Inter Tight", sans-serif;
+    --title: 700 1.5rem/1.333 var(--ff-tight);
+
+    /* Inter */
+    --ff-base: "Inter", sans-serif;
+    --pg-md: 500 0.875rem/1.714 var(--ff-base);
+    --pg-sm: 500 0.75rem/1.333 var(--ff-base);
+    --label-lg: 700 1rem/1.5 var(--ff-base);
+    --label-md: 700 0.875rem/1.714 var(--ff-base);
+    --label-sm: 700 0.75/1.333 var(--ff-base);
+    --link: 500 0.75/1.333 var(--ff-base);
+    --label-calendar: 400 1rem/1.5 var(--ff-base);
+
+    /* Proportions */
+    --atual-width: 24.375rem;
+}
+.hidden {
+  display: none !important;
+}
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 999; 
+  
+  /* O efeito de blur e escurecimento */
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 44.4375rem) {
+  :root{
+    --atual-width: 54.4375rem;
+  }
+}

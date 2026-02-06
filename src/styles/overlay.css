@@ -1,0 +1,245 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+#overlay{
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background-color: var(--background-tertiary);
+    border-radius: .75rem;
+    z-index: 9999;
+
+    & .form-header{
+        margin-bottom: 1.6rem;
+    }
+
+    & form{
+        padding: 2rem 1.25rem;
+
+        gap: 1rem;
+
+        & h2{
+            font: var(--title);
+            color: var(--content-primary);
+        }
+        & p{
+            font: var(--pg-md);
+            color: var(--content-secondary);
+        }
+    }
+
+    & strong{
+        font: var(--label-md);
+        color: var(--content-primary);
+    }
+}
+
+#close-form{
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    
+    background-image: url("../assets/icons/close-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    padding-top: .5rem;
+    margin-top: auto;
+    align-self: flex-end;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    & input{
+        all: unset;
+        box-sizing: border-box;
+
+        height: 3rem;
+
+        padding: 0.75rem 0.75rem 0.75rem 2.4rem;
+
+        border: 1px solid var(--content-tertiary);
+        border-radius: 0.75rem;
+
+        font: var(--label-calendar);
+        color: var(--content-secondary);
+    }
+}
+
+.form-group.icon-user::before{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 0.75rem;
+
+    background-image: url("../assets/icons/user-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.form-group.icon-pet::before{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 0.75rem;
+
+    background-image: url("../assets/icons/pet-paw-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.form-group.icon-phone::before{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 0.75rem;
+
+    background-image: url("../assets/icons/phone-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+/* DIA DO AGENDAMENTO */
+.form-group.icon-date::before{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 0.75rem;
+
+    background-image: url("../assets/icons/calendar-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.form-group.icon-date::after{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 90%;
+
+    background-image: url("../assets/icons/check-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.icon-date input[type="date"]::-webkit-calendar-picker-indicator{
+    opacity: 0%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* HORA DO AGENDAMENTO */
+.form-group.icon-time::before{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 0.75rem;
+
+    background-image: url("../assets/icons/clock-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+.form-group.icon-time::after{
+    content: "";
+    position: absolute;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    top: 2.3rem;
+    left: 90%;
+
+    background-image: url("../assets/icons/check-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.icon-time input[type="time"]::-webkit-calendar-picker-indicator{
+    opacity: 0%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#submit-btn{
+    justify-content: flex-end;
+    & input{
+        all: unset;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        background-color: var(--background-brand);
+
+        padding: .75rem 1.5rem;
+        border-radius: .75rem;
+
+        font: var(--label-lg);
+        color: var(--content-black);
+
+        box-shadow: 0 0 .5rem .1rem var(--background-brand);
+    }
+}
+
+@media (min-width: 44.4375rem) {
+    #overlay{
+        width: 40%;
+        max-height: auto;
+    }
+
+    .form-group.icon-date::after {
+        left: auto;
+        right: 0.75rem;
+    }
+
+    .form-group.icon-time::after {
+        left: auto;
+        right: 0.75rem;
+    }
+    #submit-btn{
+        & input{
+            box-shadow: none;
+        }
+    }
+}
